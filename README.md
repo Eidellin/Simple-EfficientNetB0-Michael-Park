@@ -22,3 +22,23 @@ The unique aspect of EfficientNet is the use of a new compound scaling method. T
 The model was developed by scaling down the baseline network to make it as small and efficient as possible. Especially when computational resources or power is limited, this model is a strong choice due to its efficient use of computational resources and strong performance.
 
 The Cross Entropy loss and the Lion optimizer have been chosen to improve its performance. The Cross Entropy loss is a famous loss function for multi-class classification and the Lion optimizer is one of the famous modern optimizers especially in the Computer Vision field.
+
+## Results
+
+### Localisation Performance
+
+| Model           | Mean IoU | SD IoU | Mean Distance (px) | SD Distance (px) |
+|------------------|----------|--------|---------------------|-------------------|
+| EfficientNetB0  | 0.030    | 1.275  | 289.97              | 129.67            |
+| SVM             | -0.258   | 1.930  | 207.80              | 123.34            |
+| Faster R-CNN    | 0.89     | 0.79   | 12.3                | 11.6              |
+
+### Classification Performance
+
+| Model           | Accuracy | Precision           | Recall             | F1-Score          |
+|------------------|----------|---------------------|---------------------|-------------------|
+| EfficientNetB0  | 64%      | 57%                 | 81%                | 68%              |
+| SVM             | 75%      | 71%                 | 83%                | 77%              |
+| Faster R-CNN    | 94%      | Penguins: 100%      | Penguins: 89%      | Penguins: 94%    |
+|                  |          | Turtles: 90%       | Turtles: 100%      | Turtles: 95%     |
+
