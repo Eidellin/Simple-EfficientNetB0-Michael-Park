@@ -1,6 +1,6 @@
 # Simple-EfficientNetB0-Michael-Park
 
-Version 0
+Version 1
 
 ## Project Title: Kaggle: Penguins vs Turtles object detection and classification using computer vision technologies 
 Object detection and classification are the tasks of determining an object’s location and classifying it in an image with a predicted bounding box and label. In the field of computer vision, models, methods and strategies developed to solve this task are rapidly evolving. For many applications, the aim is to develop and evaluate pre-existing methods for the accurate and efficient detection and classification of objects in a dataset. The Penguins versus Turtles dataset available from Kaggle consists of a training set of 500 images and a validation set of 72 images containing either a penguin or a turtle. Our task was to localise and classify images as penguins or turtles by constructing a predicted bounding box and label. The purpose of this task was to evaluate and develop methods that can analyse the images of the dataset accurately and efficiently. In literature there exist many models and techniques to solve this task.
@@ -13,7 +13,8 @@ The objectives of this report are: 1)  to review our selected object detection a
 
 \- from my team report
 
-My model was EfficientNetB0. This is a simplified version and not perfectly implemented.
+I chose EfficientNetB0 with Lion Optimizer (Image Classification Model) [Version 1]
+I trained my model with Google Colab (T4 GPU).
 
 ## EfficientNetB0
 
@@ -25,7 +26,7 @@ The model was developed by scaling down the baseline network to make it as small
 
 The Cross Entropy loss and the Lion optimizer have been chosen to improve its performance. The Cross Entropy loss is a famous loss function for multi-class classification and the Lion optimizer is one of the famous modern optimizers especially in the Computer Vision field.
 
-## Results
+## Results (Classification Performance)
 
 ### Localisation Performance
 
@@ -39,8 +40,21 @@ The Cross Entropy loss and the Lion optimizer have been chosen to improve its pe
 
 | Model           | Accuracy | Precision           | Recall             | F1-Score          |
 |------------------|----------|---------------------|---------------------|-------------------|
-| EfficientNetB0  | 64%      | 57%                 | 81%                | 68%              |
+| EfficientNetB0 (v0)  | 64%      | 57%                 | 81%                | 68%              |
+| EfficientNetB0 (v0)  | 76.39%      | 80.65%               | 69.44%              | 74.63%            |
 | SVM             | 75%      | 71%                 | 83%                | 77%              |
 | Faster R-CNN    | 94%      | Penguins: 100%      | Penguins: 89%      | Penguins: 94%    |
 |                  |          | Turtles: 90%       | Turtles: 100%      | Turtles: 95%     |
 
+## Key Sources
+[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946)  
+[MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/pdf/1801.04381)  
+[Squeeze-and-Excitation Networks](https://arxiv.org/pdf/1709.01507)  
+Lion Optimizer [paper](https://arxiv.org/pdf/2302.06675) [git hub](https://github.com/lucidrains/lion-pytorch/tree/main)
+[Data Set: Penguins vs Turtles Image classification with bounding boxes](https://www.kaggle.com/datasets/abbymorgan/penguins-vs-turtles?datasetId=3202424&sortBy=dateRun&tab=profile)  
+
+## How to Get a Sample Model
+1. Run "train.py".  
+
+## How to Test Sample Model (Validation)
+1. Run "train.py test".
