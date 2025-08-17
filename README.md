@@ -1,5 +1,7 @@
 # Simple-EfficientNetB0-Michael-Park
 
+Version 0
+
 ## Project Title: Kaggle: Penguins vs Turtles object detection and classification using computer vision technologies 
 Object detection and classification are the tasks of determining an object’s location and classifying it in an image with a predicted bounding box and label. In the field of computer vision, models, methods and strategies developed to solve this task are rapidly evolving. For many applications, the aim is to develop and evaluate pre-existing methods for the accurate and efficient detection and classification of objects in a dataset. The Penguins versus Turtles dataset available from Kaggle consists of a training set of 500 images and a validation set of 72 images containing either a penguin or a turtle. Our task was to localise and classify images as penguins or turtles by constructing a predicted bounding box and label. The purpose of this task was to evaluate and develop methods that can analyse the images of the dataset accurately and efficiently. In literature there exist many models and techniques to solve this task.
 
